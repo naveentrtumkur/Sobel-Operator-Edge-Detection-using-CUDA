@@ -20,6 +20,7 @@ typedef unsigned char   uint8_t;
 typedef signed char     int8_t;
 
 
+uint32_t cuda_sobel(FILE *inFile, FILE *cuda_outfile);
 
 uint32_t mysqrt(uint32_t a);
 //----------------------------------------------------
