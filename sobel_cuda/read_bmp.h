@@ -20,18 +20,25 @@ typedef unsigned char   uint8_t;
 typedef signed char     int8_t;
 
 
-uint32_t cuda_sobel(FILE *inFile, FILE *cuda_outfile);
-
-uint32_t mysqrt(uint32_t a);
 //----------------------------------------------------
-//FUNC: serial_sobel(FILE *in,FILE *out)
+//FUNC: SerialSobelEdgeDetection(uint8_t *input, uint8_t *output, int height, int width)
 //DESCP:
 //      Returns the threshold value for convergence of serial 
 //      version of sobel operator with classification.
 //NOTE:	Will work only on .bmp image files and after 
 //      image is loaded using read_bmp_file
 //----------------------------------------------------
-uint32_t serial_sobel(FILE *inFile, FILE *outFile);
+int SerialSobelEdgeDetection(uint8_t *input, uint8_t *output, int height, int width);
+
+//----------------------------------------------------
+//FUNC: ParallelSobelEdgeDetection(uint8_t *input, uint8_t *output, int height, int width)
+//DESCP:
+//      Returns the threshold value for convergence of Parallel 
+//      version of sobel operator with classification.
+//NOTE:	Will work only on .bmp image files and after 
+//      image is loaded using read_bmp_file
+//----------------------------------------------------
+int ParallelSobelEdgeDetection(uint8_t *input, uint8_t *output, int height, int width);
 
 //----------------------------------------------------	
 //FUNC: get_image_width()
