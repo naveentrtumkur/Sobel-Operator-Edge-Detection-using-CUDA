@@ -19,6 +19,20 @@ typedef signed short    int16_t;
 typedef unsigned char   uint8_t;
 typedef signed char     int8_t;
 
+
+uint32_t cuda_sobel(FILE *inFile, FILE *cuda_outfile);
+
+uint32_t mysqrt(uint32_t a);
+//----------------------------------------------------
+//FUNC: serial_sobel(FILE *in,FILE *out)
+//DESCP:
+//      Returns the threshold value for convergence of serial 
+//      version of sobel operator with classification.
+//NOTE:	Will work only on .bmp image files and after 
+//      image is loaded using read_bmp_file
+//----------------------------------------------------
+uint32_t serial_sobel(FILE *inFile, FILE *outFile);
+
 //----------------------------------------------------	
 //FUNC: get_image_width()
 //DESCP:
